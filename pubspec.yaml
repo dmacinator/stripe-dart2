@@ -1,4 +1,4 @@
-name: stripe
+name: stripe2
 version: 4.12.0
 description: A simple Stripe API wrapper, that is meant to be used on the server.
 homepage: https://github.com/enyo/stripe-dart
