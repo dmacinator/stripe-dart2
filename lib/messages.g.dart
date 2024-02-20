@@ -272,7 +272,7 @@ Map<String, dynamic> _$EphemeralKeysToJson(EphemeralKeys instance) {
 }
 
 const _$_EphemeralKeysObjectEnumMap = {
-  _EphemeralKeysObject.ephemeralkeys: 'ephemeralkeys',
+  _EphemeralKeysObject.ephemeral_key: 'ephemeral_key',
 };
 
 DataList<T> _$DataListFromJson<T>(
