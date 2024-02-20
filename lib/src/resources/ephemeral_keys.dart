@@ -14,7 +14,7 @@ class EphemeralKeysResource extends Resource<EphemeralKeys> {
   }
 
   Future<EphemeralKeys> delete(String keyId) async {
-    final map = await del('ephmeral_kesys/$keyId');
+    final map = await del('ephemeral_keys/$keyId');
     return EphemeralKeys.fromJson(map);
   }
 }
