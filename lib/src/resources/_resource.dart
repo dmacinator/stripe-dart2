@@ -27,6 +27,6 @@ abstract class Resource<T extends Message> {
 
   @protected
   Future<Map<String, dynamic>> del(final String path,
-          {Map<String, dynamic>? queryParameters}) =>
-      _client.del(makeUrl(path), data: queryParameters);
+          {Map<String, dynamic>? data}) =>
+      _client.del(makeUrl(path), data: data);
 }
