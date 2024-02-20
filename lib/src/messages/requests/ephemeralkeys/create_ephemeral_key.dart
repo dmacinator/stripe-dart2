@@ -10,12 +10,12 @@ abstract class _EphemeralKeysRequest {
   //A single-use token, created by Stripe.js, used for creating ephemeral keys for Issuing Cards without exchanging sensitive information.
   final String? nonce;
   //The ID of the Identity VerificationSession you'd like to access using the resulting ephemeral key
-  final String? verificationSession;
+  final String? verification_session;
   _EphemeralKeysRequest({
     this.customer,
     this.issuing_card,
     this.nonce,
-    this.verificationSession,
+    this.verification_session,
   });
 }
 
@@ -25,7 +25,7 @@ class CreateEphemeralKeysRequest extends _EphemeralKeysRequest {
       {super.customer,
       super.issuing_card,
       super.nonce,
-      super.verificationSession});
+      super.verification_session});
 
   factory CreateEphemeralKeysRequest.fromJson(Map<String, dynamic> json) =>
       _$CreateEphemeralKeysRequestFromJson(json);

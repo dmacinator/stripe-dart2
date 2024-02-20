@@ -953,7 +953,7 @@ CreateEphemeralKeysRequest _$CreateEphemeralKeysRequestFromJson(
       customer: json['customer'] as String?,
       issuing_card: json['issuing_card'] as String?,
       nonce: json['nonce'] as String?,
-      verificationSession: json['verification_session'] as String?,
+      verification_session: json['verification_session'] as String?,
     );
 
 Map<String, dynamic> _$CreateEphemeralKeysRequestToJson(
@@ -969,7 +969,7 @@ Map<String, dynamic> _$CreateEphemeralKeysRequestToJson(
   writeNotNull('customer', instance.customer);
   writeNotNull('issuing_card', instance.issuing_card);
   writeNotNull('nonce', instance.nonce);
-  writeNotNull('verification_session', instance.verificationSession);
+  writeNotNull('verification_session', instance.verification_session);
   return val;
 }
 
