@@ -20,7 +20,7 @@ part 'src/messages/shipping_specification.dart';
 part 'src/messages/requests/create_checkout_session.dart';
 part 'src/messages/requests/customer/create_customer.dart';
 part 'src/messages/requests/ephemeralkeys/create_ephemeral_key.dart';
-part 'src/messages/requests/ephemeralkeys/delete_ephemeral_key.dart';
+//part 'src/messages/requests/ephemeralkeys/delete_ephemeral_key.dart';
 part 'src/messages/requests/create_payment_intent.dart';
 part 'src/messages/requests/create_portal_session.dart';
 part 'src/messages/requests/create_refund.dart';
