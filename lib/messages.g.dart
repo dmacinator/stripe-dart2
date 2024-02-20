@@ -359,6 +359,26 @@ Map<String, dynamic> _$CustomerEventToJson(CustomerEvent instance) =>
       'type': instance.type,
     };
 
+EphmeralKeyEvent _$EphmeralKeyEventFromJson(Map<String, dynamic> json) =>
+    EphmeralKeyEvent(
+      object: $enumDecode(_$_EventObjectEnumMap, json['object']),
+      id: json['id'] as String,
+      type: json['type'] as String,
+      data: EventData<EphmeralKey>.fromJson(
+          json['data'] as Map<String, dynamic>,
+          (value) => EphmeralKey.fromJson(value as Map<String, dynamic>)),
+    );
+
+Map<String, dynamic> _$EphmeralKeyEventToJson(EphmeralKeyEvent instance) =>
+    <String, dynamic>{
+      'object': _$_EventObjectEnumMap[instance.object]!,
+      'id': instance.id,
+      'data': instance.data.toJson(
+        (value) => value.toJson(),
+      ),
+      'type': instance.type,
+    };
+
 ChargeEvent _$ChargeEventFromJson(Map<String, dynamic> json) => ChargeEvent(
       object: $enumDecode(_$_EventObjectEnumMap, json['object']),
       id: json['id'] as String,

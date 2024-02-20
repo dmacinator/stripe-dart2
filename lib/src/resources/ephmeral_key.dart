@@ -2,10 +2,11 @@ import 'dart:async';
 
 import 'package:stripe2/messages.dart';
 
+import '../client.dart';
 import '_resource.dart';
 
 class EphmeralKeyResource extends Resource<EphmeralKey> {
-  EphmeralKeyResource(super.client);
+  EphmeralKeyResource(Client client) : super(client);
 
   Future<EphmeralKey> create(CreateEphmeralKeyRequest request) async {
     final response = await post('ephmeral_keys', data: request.toJson());
