@@ -1,6 +1,7 @@
 # Stripe Dart (2)
 
-Original link :https://github.com/enyo/stripe-dart
+Original link : (https://github.com/enyo/stripe-dart)
+
 Credits to Matias Meno for the creation of this sdk!
 
 This implementation is based on the official Stripe Java and NodeJS API wrappers
