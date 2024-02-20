@@ -22,7 +22,7 @@ void main() {
 
       client.dio.interceptors.add(InterceptorsWrapper(
         onRequest: (options, handler) {
-          expect(options.uri, Uri.parse('http://void/ephmeral_keys'));
+          expect(options.uri, Uri.parse('http://void/ephemeral_keys'));
           handler.resolve(
             Response(
               requestOptions: options,

@@ -950,8 +950,8 @@ Map<String, dynamic> _$CreateCustomerRequestToJson(
 CreateEphemeralKeysRequest _$CreateEphemeralKeysRequestFromJson(
         Map<String, dynamic> json) =>
     CreateEphemeralKeysRequest(
-      customerId: json['customer_id'] as String?,
-      issuingCardId: json['issuing_card_id'] as String?,
+      customer: json['customer'] as String?,
+      issuing_card: json['issuing_card'] as String?,
       nonce: json['nonce'] as String?,
       verificationSession: json['verification_session'] as String?,
     );
@@ -966,8 +966,8 @@ Map<String, dynamic> _$CreateEphemeralKeysRequestToJson(
     }
   }
 
-  writeNotNull('customer_id', instance.customerId);
-  writeNotNull('issuing_card_id', instance.issuingCardId);
+  writeNotNull('customer', instance.customer);
+  writeNotNull('issuing_card', instance.issuing_card);
   writeNotNull('nonce', instance.nonce);
   writeNotNull('verification_session', instance.verificationSession);
   return val;

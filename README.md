@@ -20,5 +20,5 @@ files with `dart run build_runner build` when you make changes and want to test
 them.
 
 #Additions to Stripe-Dart 2
-- Create ephmeral keys (experimental
-- Delete Ephmeral keys
+- Create ephemeral keys (experimental
+- Delete Ephemeral keys
