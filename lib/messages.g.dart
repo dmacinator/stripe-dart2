@@ -973,18 +973,6 @@ Map<String, dynamic> _$CreateEphemeralKeysRequestToJson(
   return val;
 }
 
-DeleteEphemeralKeyRequest _$DeleteEphemeralKeyRequestFromJson(
-        Map<String, dynamic> json) =>
-    DeleteEphemeralKeyRequest(
-      id: json['id'] as String,
-    );
-
-Map<String, dynamic> _$DeleteEphemeralKeyRequestToJson(
-        DeleteEphemeralKeyRequest instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-    };
-
 CreatePaymentIntentRequest _$CreatePaymentIntentRequestFromJson(
         Map<String, dynamic> json) =>
     CreatePaymentIntentRequest(
