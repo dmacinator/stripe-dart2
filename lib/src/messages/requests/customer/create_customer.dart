@@ -1,4 +1,4 @@
-part of '../../../messages.dart';
+part of '../../../../messages.dart';
 
 /// https://stripe.com/docs/api/checkout/customers/create
 abstract class _CustomerRequest {

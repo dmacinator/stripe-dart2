@@ -242,6 +242,38 @@ const _$_CustomerObjectEnumMap = {
   _CustomerObject.customer: 'customer',
 };
 
+EphmeralKey _$EphmeralKeyFromJson(Map<String, dynamic> json) => EphmeralKey(
+      object: $enumDecode(_$_EphmeralKeyObjectEnumMap, json['object']),
+      id: json['id'] as String,
+      created: json['created'] as int,
+      expires: json['expires'] as int,
+      livemode: json['livemode'] as bool,
+      secret: json['secret'] as String?,
+    );
+
+Map<String, dynamic> _$EphmeralKeyToJson(EphmeralKey instance) {
+  final val = <String, dynamic>{
+    'object': _$_EphmeralKeyObjectEnumMap[instance.object]!,
+    'id': instance.id,
+    'created': instance.created,
+    'expires': instance.expires,
+    'livemode': instance.livemode,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('secret', instance.secret);
+  return val;
+}
+
+const _$_EphmeralKeyObjectEnumMap = {
+  _EphmeralKeyObject.ephemeralkey: 'ephemeralkey',
+};
+
 DataList<T> _$DataListFromJson<T>(
   Map<String, dynamic> json,
   T Function(Object? json) fromJsonT,
@@ -893,6 +925,44 @@ Map<String, dynamic> _$CreateCustomerRequestToJson(
   writeNotNull('phone_number', instance.phoneNumber);
   return val;
 }
+
+CreateEphmeralKeyRequest _$CreateEphmeralKeyRequestFromJson(
+        Map<String, dynamic> json) =>
+    CreateEphmeralKeyRequest(
+      customerId: json['customer_id'] as String?,
+      issuingCardId: json['issuing_card_id'] as String?,
+      nonce: json['nonce'] as String?,
+      verificationSession: json['verification_session'] as String?,
+    );
+
+Map<String, dynamic> _$CreateEphmeralKeyRequestToJson(
+    CreateEphmeralKeyRequest instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('customer_id', instance.customerId);
+  writeNotNull('issuing_card_id', instance.issuingCardId);
+  writeNotNull('nonce', instance.nonce);
+  writeNotNull('verification_session', instance.verificationSession);
+  return val;
+}
+
+DeleteEphemeralKeyRequest _$DeleteEphemeralKeyRequestFromJson(
+        Map<String, dynamic> json) =>
+    DeleteEphemeralKeyRequest(
+      id: json['id'] as String,
+    );
+
+Map<String, dynamic> _$DeleteEphemeralKeyRequestToJson(
+        DeleteEphemeralKeyRequest instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+    };
 
 CreatePaymentIntentRequest _$CreatePaymentIntentRequestFromJson(
         Map<String, dynamic> json) =>

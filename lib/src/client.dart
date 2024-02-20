@@ -41,6 +41,9 @@ class Client {
         'Content-Type': 'application/x-www-form-urlencoded',
       };
   }
+// Inside your Client class
+
+  /// Makes a delete request to the Stripe API
 
   /// The actual [Dio] instance that makes the request. You shouldn't need to
   /// access this.
@@ -80,6 +83,29 @@ class Client {
     );
     return processResponse(response);
   }
+
+Future<Map<String, dynamic>> del(
+  final String path, {
+  final Map<String, dynamic>? data,
+  final String? idempotencyKey,
+}) async {
+  try {
+    final response = await dio.delete<Map<String, dynamic>>(path,
+        data: data,
+        options: _createRequestOptions(idempotencyKey: idempotencyKey));
+    return processResponse(response);
+  } on DioException catch (e) {
+    var message = e.message ?? '';
+    if (e.response?.data != null) {
+      message += '${e.response!.data}';
+    }
+    throw InvalidRequestException(message);
+  }
+}
+
+  //Makes a delete request to the Stripe Api.(?)
+
+  
 
   Options? _createRequestOptions({String? idempotencyKey}) =>
       idempotencyKey == null
