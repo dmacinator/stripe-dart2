@@ -46,7 +46,7 @@ void main() {
 
 const createKeyResponse = r'''
 {
-  "object":"ephemeralkeys",
+  "object":"ephemeral_key",
   "id":"cus_JC3alB0zcgmLbY",
   "created":1616864327,
   "expires":1616864327,

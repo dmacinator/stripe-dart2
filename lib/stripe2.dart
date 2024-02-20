@@ -42,7 +42,7 @@ class Stripe {
   /// https://stripe.com/docs/api/customers
   final CustomerResource customer;
   //idk
-  final EphemeralKeysResource ephemeralkeys;
+  final EphemeralKeysResource ephemeral_key;
 
   /// https://stripe.com/docs/api/refunds
   final RefundResource refund;
@@ -75,7 +75,7 @@ class Stripe {
       : checkoutSession = CheckoutSessionResource(client),
         portalSession = PortalSessionResource(client),
         customer = CustomerResource(client),
-        ephemeralkeys = EphemeralKeysResource(client),
+        ephemeral_key = EphemeralKeysResource(client),
         refund = RefundResource(client),
         paymentIntent = PaymentIntentResource(client),
         price = PriceResource(client),
