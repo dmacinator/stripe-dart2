@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
-import 'package:stripe/src/exceptions.dart';
+import 'package:stripe2/src/exceptions.dart';
 
 const _defaultUrl = 'https://api.stripe.com/v1/';
 const _defaultVersion = '2020-08-27';
@@ -84,28 +84,26 @@ class Client {
     return processResponse(response);
   }
 
-Future<Map<String, dynamic>> del(
-  final String path, {
-  final Map<String, dynamic>? data,
-  final String? idempotencyKey,
-}) async {
-  try {
-    final response = await dio.delete<Map<String, dynamic>>(path,
-        data: data,
-        options: _createRequestOptions(idempotencyKey: idempotencyKey));
-    return processResponse(response);
-  } on DioException catch (e) {
-    var message = e.message ?? '';
-    if (e.response?.data != null) {
-      message += '${e.response!.data}';
+  Future<Map<String, dynamic>> del(
+    final String path, {
+    final Map<String, dynamic>? data,
+    final String? idempotencyKey,
+  }) async {
+    try {
+      final response = await dio.delete<Map<String, dynamic>>(path,
+          data: data,
+          options: _createRequestOptions(idempotencyKey: idempotencyKey));
+      return processResponse(response);
+    } on DioException catch (e) {
+      var message = e.message ?? '';
+      if (e.response?.data != null) {
+        message += '${e.response!.data}';
+      }
+      throw InvalidRequestException(message);
     }
-    throw InvalidRequestException(message);
   }
-}
 
   //Makes a delete request to the Stripe Api.(?)
-
-  
 
   Options? _createRequestOptions({String? idempotencyKey}) =>
       idempotencyKey == null

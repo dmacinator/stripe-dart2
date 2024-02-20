@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:logging/logging.dart';
-import 'package:stripe/messages.dart';
+import 'package:stripe2/messages.dart';
 
 import '../client.dart';
 import '_resource.dart';

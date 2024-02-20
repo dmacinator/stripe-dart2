@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:stripe/messages.dart';
+import 'package:stripe2/messages.dart';
 
 import '_resource.dart';
 

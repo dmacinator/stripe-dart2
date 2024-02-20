@@ -1,4 +1,4 @@
-import 'package:stripe/stripe.dart';
+import 'package:stripe2/stripe2.dart';
 
 void main() async {
   // Use your private key here.

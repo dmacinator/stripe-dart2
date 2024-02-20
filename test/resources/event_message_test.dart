@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:stripe/messages.dart';
+import 'package:stripe2/messages.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:stripe/src/client.dart';
+import 'package:stripe2/src/client.dart';
 import 'package:test/test.dart';
 
 void main() {

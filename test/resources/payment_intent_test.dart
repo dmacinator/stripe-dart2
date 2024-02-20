@@ -2,15 +2,15 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:stripe/messages.dart'
+import 'package:stripe2/messages.dart'
     show
         Address,
         AutomaticPaymentMethods,
         PaymentMethodType,
         SetupFutureUsage,
         ShippingSpecification;
-import 'package:stripe/src/client.dart';
-import 'package:stripe/src/resources/payment_intent.dart';
+import 'package:stripe2/src/client.dart';
+import 'package:stripe2/src/resources/payment_intent.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
-import 'package:stripe/src/exceptions.dart';
+import 'package:stripe2/src/exceptions.dart';
 
 class Signature {
   late int _timestamp;

@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:stripe/src/messages/converters.dart';
+import 'package:stripe2/src/messages/converters.dart';
 
 part 'messages.g.dart';
 part 'src/messages/_message.dart';

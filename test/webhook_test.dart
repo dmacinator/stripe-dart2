@@ -1,5 +1,5 @@
-import 'package:stripe/src/signature.dart';
-import 'package:stripe/src/webhook.dart';
+import 'package:stripe2/src/signature.dart';
+import 'package:stripe2/src/webhook.dart';
 import 'package:test/test.dart';
 
 void main() {

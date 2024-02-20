@@ -1,7 +1,8 @@
 library stripe;
 
 import 'package:meta/meta.dart';
-import 'package:stripe/src/resources/ephmeral_key.dart';
+
+import 'package:stripe2/src/resources/ephmeral_key.dart';
 
 import 'src/client.dart';
 import 'src/resources/balance_transaction.dart';
