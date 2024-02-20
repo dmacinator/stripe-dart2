@@ -242,8 +242,9 @@ const _$_CustomerObjectEnumMap = {
   _CustomerObject.customer: 'customer',
 };
 
-EphmeralKey _$EphmeralKeyFromJson(Map<String, dynamic> json) => EphmeralKey(
-      object: $enumDecode(_$_EphmeralKeyObjectEnumMap, json['object']),
+EphemeralKeys _$EphemeralKeysFromJson(Map<String, dynamic> json) =>
+    EphemeralKeys(
+      object: $enumDecode(_$_EphemeralKeysObjectEnumMap, json['object']),
       id: json['id'] as String,
       created: json['created'] as int,
       expires: json['expires'] as int,
@@ -251,9 +252,9 @@ EphmeralKey _$EphmeralKeyFromJson(Map<String, dynamic> json) => EphmeralKey(
       secret: json['secret'] as String?,
     );
 
-Map<String, dynamic> _$EphmeralKeyToJson(EphmeralKey instance) {
+Map<String, dynamic> _$EphemeralKeysToJson(EphemeralKeys instance) {
   final val = <String, dynamic>{
-    'object': _$_EphmeralKeyObjectEnumMap[instance.object]!,
+    'object': _$_EphemeralKeysObjectEnumMap[instance.object]!,
     'id': instance.id,
     'created': instance.created,
     'expires': instance.expires,
@@ -270,8 +271,8 @@ Map<String, dynamic> _$EphmeralKeyToJson(EphmeralKey instance) {
   return val;
 }
 
-const _$_EphmeralKeyObjectEnumMap = {
-  _EphmeralKeyObject.ephemeralkey: 'ephemeralkey',
+const _$_EphemeralKeysObjectEnumMap = {
+  _EphemeralKeysObject.ephemeralkeys: 'ephemeralkeys',
 };
 
 DataList<T> _$DataListFromJson<T>(
@@ -359,17 +360,17 @@ Map<String, dynamic> _$CustomerEventToJson(CustomerEvent instance) =>
       'type': instance.type,
     };
 
-EphmeralKeyEvent _$EphmeralKeyEventFromJson(Map<String, dynamic> json) =>
-    EphmeralKeyEvent(
+EphemeralKeysEvent _$EphemeralKeysEventFromJson(Map<String, dynamic> json) =>
+    EphemeralKeysEvent(
       object: $enumDecode(_$_EventObjectEnumMap, json['object']),
       id: json['id'] as String,
       type: json['type'] as String,
-      data: EventData<EphmeralKey>.fromJson(
+      data: EventData<EphemeralKeys>.fromJson(
           json['data'] as Map<String, dynamic>,
-          (value) => EphmeralKey.fromJson(value as Map<String, dynamic>)),
+          (value) => EphemeralKeys.fromJson(value as Map<String, dynamic>)),
     );
 
-Map<String, dynamic> _$EphmeralKeyEventToJson(EphmeralKeyEvent instance) =>
+Map<String, dynamic> _$EphemeralKeysEventToJson(EphemeralKeysEvent instance) =>
     <String, dynamic>{
       'object': _$_EventObjectEnumMap[instance.object]!,
       'id': instance.id,
@@ -946,17 +947,17 @@ Map<String, dynamic> _$CreateCustomerRequestToJson(
   return val;
 }
 
-CreateEphmeralKeyRequest _$CreateEphmeralKeyRequestFromJson(
+CreateEphemeralKeysRequest _$CreateEphemeralKeysRequestFromJson(
         Map<String, dynamic> json) =>
-    CreateEphmeralKeyRequest(
+    CreateEphemeralKeysRequest(
       customerId: json['customer_id'] as String?,
       issuingCardId: json['issuing_card_id'] as String?,
       nonce: json['nonce'] as String?,
       verificationSession: json['verification_session'] as String?,
     );
 
-Map<String, dynamic> _$CreateEphmeralKeyRequestToJson(
-    CreateEphmeralKeyRequest instance) {
+Map<String, dynamic> _$CreateEphemeralKeysRequestToJson(
+    CreateEphemeralKeysRequest instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

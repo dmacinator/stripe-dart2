@@ -1,11 +1,11 @@
 part of '../../messages.dart';
 
-enum _EphmeralKeyObject { ephemeralkey }
+enum _EphemeralKeysObject { ephemeralkeys }
 
 /// https://docs.stripe.com/api/customers/object
 @JsonSerializable()
-class EphmeralKey extends Message {
-  final _EphmeralKeyObject object;
+class EphemeralKeys extends Message {
+  final _EphemeralKeysObject object;
 
   /// Unique identifier for the object.
   final String id;
@@ -22,7 +22,7 @@ class EphmeralKey extends Message {
 //The key's secret. You can use this value to make authorized requests to the Stripe API.
   final String? secret;
 
-  EphmeralKey({
+  EphemeralKeys({
     required this.object,
     required this.id,
     required this.created,
@@ -31,9 +31,9 @@ class EphmeralKey extends Message {
     this.secret,
   });
 
-  factory EphmeralKey.fromJson(Map<String, dynamic> json) =>
-      _$EphmeralKeyFromJson(json);
+  factory EphemeralKeys.fromJson(Map<String, dynamic> json) =>
+      _$EphemeralKeysFromJson(json);
 
   @override
-  Map<String, dynamic> toJson() => _$EphmeralKeyToJson(this);
+  Map<String, dynamic> toJson() => _$EphemeralKeysToJson(this);
 }

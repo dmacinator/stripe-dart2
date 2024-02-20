@@ -4,21 +4,21 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:stripe2/messages.dart';
 import 'package:stripe2/src/client.dart';
-import 'package:stripe2/src/resources/ephmeral_key.dart';
+import 'package:stripe2/src/resources/ephemeral_keys.dart';
 import 'package:test/test.dart';
 
 void main() {
   late Client client;
-  late EphmeralKeyResource ephmeralKeyResource;
+  late EphemeralKeysResource ephemeralKeyResource;
   setUp(() {
     // We set the baseUrl to something unreachable, because we define
     // interceptors in the tests.
     client = Client(apiKey: 'sk_foobar', baseUrl: 'http://void/');
-    ephmeralKeyResource = EphmeralKeyResource(client);
+    ephemeralKeyResource = EphemeralKeysResource(client);
   });
-  group('EphmeralKeyResource', () {
+  group('EphemeralKeysResource', () {
     test('properly decodes all values', () async {
-      final request = CreateEphmeralKeyRequest();
+      final request = CreateEphemeralKeysRequest();
 
       client.dio.interceptors.add(InterceptorsWrapper(
         onRequest: (options, handler) {
@@ -33,7 +33,7 @@ void main() {
         },
       ));
 
-      final response = await ephmeralKeyResource.create(request);
+      final response = await ephemeralKeyResource.create(request);
 
       expect(response.id, 'cus_JC3alB0zcgmLbY');
       expect(response.secret, 'grwe098');
@@ -46,7 +46,7 @@ void main() {
 
 const createKeyResponse = r'''
 {
-  "object":"ephemeralkey",
+  "object":"ephemeralkeys",
   "id":"cus_JC3alB0zcgmLbY",
   "created":1616864327,
   "expires":1616864327,

@@ -1,7 +1,7 @@
 part of '../../../../messages.dart';
 
 /// https://stripe.com/docs/api/checkout/customers/create
-abstract class _EphmeralKeyRequest {
+abstract class _EphemeralKeysRequest {
   // The ID of the Customer you'd like to modify using the resulting ephemeral key.
   final String? customerId;
   //he ID of the Issuing Card you'd like to access using the resulting ephemeral key.
@@ -10,7 +10,7 @@ abstract class _EphmeralKeyRequest {
   final String? nonce;
   //The ID of the Identity VerificationSession you'd like to access using the resulting ephemeral key
   final String? verificationSession;
-  _EphmeralKeyRequest({
+  _EphemeralKeysRequest({
     this.customerId,
     this.issuingCardId,
     this.nonce,
@@ -19,15 +19,15 @@ abstract class _EphmeralKeyRequest {
 }
 
 @JsonSerializable()
-class CreateEphmeralKeyRequest extends _EphmeralKeyRequest {
-  CreateEphmeralKeyRequest(
+class CreateEphemeralKeysRequest extends _EphemeralKeysRequest {
+  CreateEphemeralKeysRequest(
       {super.customerId,
       super.issuingCardId,
       super.nonce,
       super.verificationSession});
 
-  factory CreateEphmeralKeyRequest.fromJson(Map<String, dynamic> json) =>
-      _$CreateEphmeralKeyRequestFromJson(json);
+  factory CreateEphemeralKeysRequest.fromJson(Map<String, dynamic> json) =>
+      _$CreateEphemeralKeysRequestFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CreateEphmeralKeyRequestToJson(this);
+  Map<String, dynamic> toJson() => _$CreateEphemeralKeysRequestToJson(this);
 }

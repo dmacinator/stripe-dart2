@@ -33,7 +33,7 @@ abstract class Event<T extends Message> extends Message {
         return CheckoutSessionEvent.fromJson(json) as T;
       case 'customer':
         return CustomerEvent.fromJson(json) as T;
-        case 'customer':
+      case 'customer':
         return CustomerEvent.fromJson(json) as T;
       case 'payment_intent':
         return PaymentIntentEvent.fromJson(json) as T;
@@ -101,19 +101,19 @@ class CustomerEvent extends Event<Customer> {
 }
 
 @JsonSerializable()
-class EphmeralKeyEvent extends Event<EphmeralKey> {
-  EphmeralKeyEvent({
+class EphemeralKeysEvent extends Event<EphemeralKeys> {
+  EphemeralKeysEvent({
     required _EventObject object,
     required String id,
     required String type,
-    required EventData<EphmeralKey> data,
+    required EventData<EphemeralKeys> data,
   }) : super(object: object, id: id, data: data, type: type);
 
-  factory EphmeralKeyEvent.fromJson(Map<String, dynamic> json) =>
-      _$EphmeralKeyEventFromJson(json);
+  factory EphemeralKeysEvent.fromJson(Map<String, dynamic> json) =>
+      _$EphemeralKeysEventFromJson(json);
 
   @override
-  Map<String, dynamic> toJson() => _$EphmeralKeyEventToJson(this);
+  Map<String, dynamic> toJson() => _$EphemeralKeysEventToJson(this);
 }
 
 @JsonSerializable()
