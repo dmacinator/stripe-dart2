@@ -1,6 +1,7 @@
 library stripe;
 
 import 'package:meta/meta.dart';
+import 'package:stripe/src/resources/ephmeral_key.dart';
 
 import 'src/client.dart';
 import 'src/resources/balance_transaction.dart';
@@ -39,6 +40,8 @@ class Stripe {
 
   /// https://stripe.com/docs/api/customers
   final CustomerResource customer;
+  //idk
+  final EphmeralKeyResource ephmeralkeys;
 
   /// https://stripe.com/docs/api/refunds
   final RefundResource refund;
@@ -71,6 +74,7 @@ class Stripe {
       : checkoutSession = CheckoutSessionResource(client),
         portalSession = PortalSessionResource(client),
         customer = CustomerResource(client),
+        ephmeralkeys = EphmeralKeyResource(client),
         refund = RefundResource(client),
         paymentIntent = PaymentIntentResource(client),
         price = PriceResource(client),
