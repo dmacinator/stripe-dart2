@@ -1,4 +1,4 @@
-# Stripe Dart
+# Stripe Dart (2)
 
 This implementation is based on the official Stripe Java and NodeJS API wrappers
 and written as a proper native dart library.
@@ -14,3 +14,7 @@ requests to increase coverage.
 All messages are written with `json_serializable` so make sure to generate the
 files with `dart run build_runner build` when you make changes and want to test
 them.
+
+#Additions to Stripe-Dart 2
+- Create ephmeral keys (experimental
+- Delete Ephmeral keys
