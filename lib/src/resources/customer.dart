@@ -23,4 +23,9 @@ class CustomerResource extends Resource<Customer> {
         await post('customers/${request.id}', data: request.toJson());
     return Customer.fromJson(response);
   }
+
+  Future<EphemeralKeys> delete(String customerId) async {
+    final request = await del('customers/$customerId');
+    return EphemeralKeys.fromJson(request);
+  }
 }
