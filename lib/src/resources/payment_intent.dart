@@ -15,6 +15,13 @@ class PaymentIntentResource extends Resource<PaymentIntent> {
     return PaymentIntent.fromJson(response);
   }
 
+  Future<PaymentIntent> update(
+      UpdatePaymentIntentRequest request, String paymentIntentId) async {
+    final response =
+        await post('payment_intents/$paymentIntentId', data: request.toJson());
+    return PaymentIntent.fromJson(response);
+  }
+
   Future<PaymentIntent> retrieve(String paymentIntentId) async {
     final map = await get('payment_intents/$paymentIntentId');
     return PaymentIntent.fromJson(map);

@@ -1042,6 +1042,73 @@ Map<String, dynamic> _$CreatePaymentIntentRequestToJson(
   return val;
 }
 
+UpdatePaymentIntentRequest _$UpdatePaymentIntentRequestFromJson(
+        Map<String, dynamic> json) =>
+    UpdatePaymentIntentRequest(
+      amount: json['amount'] as int,
+      currency: json['currency'] as String,
+      automaticPaymentMethods: json['automatic_payment_methods'] == null
+          ? null
+          : AutomaticPaymentMethods.fromJson(
+              json['automatic_payment_methods'] as Map<String, dynamic>),
+      confirm: json['confirm'] as bool?,
+      customer: json['customer'] as String?,
+      description: json['description'] as String?,
+      metadata: (json['metadata'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
+      offSession: json['off_session'] as bool?,
+      paymentMethod: json['payment_method'] as String?,
+      paymentMethodTypes: (json['payment_method_types'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$PaymentMethodTypeEnumMap, e))
+          .toSet(),
+      receiptEmail: json['receipt_email'] as String?,
+      setupFutureUsage: $enumDecodeNullable(
+          _$SetupFutureUsageEnumMap, json['setup_future_usage']),
+      shipping: json['shipping'] == null
+          ? null
+          : ShippingSpecification.fromJson(
+              json['shipping'] as Map<String, dynamic>),
+      statementDescriptor: json['statement_descriptor'] as String?,
+      statementDescriptorSuffix: json['statement_descriptor_suffix'] as String?,
+    );
+
+Map<String, dynamic> _$UpdatePaymentIntentRequestToJson(
+    UpdatePaymentIntentRequest instance) {
+  final val = <String, dynamic>{
+    'amount': instance.amount,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'automatic_payment_methods', instance.automaticPaymentMethods?.toJson());
+  val['currency'] = instance.currency;
+  writeNotNull('confirm', instance.confirm);
+  writeNotNull('customer', instance.customer);
+  writeNotNull('description', instance.description);
+  writeNotNull('metadata', instance.metadata);
+  writeNotNull('off_session', instance.offSession);
+  writeNotNull('payment_method', instance.paymentMethod);
+  writeNotNull(
+      'payment_method_types',
+      instance.paymentMethodTypes
+          ?.map((e) => _$PaymentMethodTypeEnumMap[e]!)
+          .toList());
+  writeNotNull('receipt_email', instance.receiptEmail);
+  writeNotNull('setup_future_usage',
+      _$SetupFutureUsageEnumMap[instance.setupFutureUsage]);
+  writeNotNull('shipping', instance.shipping?.toJson());
+  writeNotNull('statement_descriptor', instance.statementDescriptor);
+  writeNotNull(
+      'statement_descriptor_suffix', instance.statementDescriptorSuffix);
+  return val;
+}
+
 CreatePortalSessionRequest _$CreatePortalSessionRequestFromJson(
         Map<String, dynamic> json) =>
     CreatePortalSessionRequest(
