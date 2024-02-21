@@ -1,4 +1,4 @@
-part of '../../../messages.dart';
+part of '../../../../messages.dart';
 
 /// https://stripe.com/docs/api/prices/list
 @JsonSerializable()

@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 part of '../../../../messages.dart';
 
 /// https://stripe.com/docs/api/checkout/customers/create
@@ -5,17 +7,17 @@ abstract class _EphemeralKeysRequest {
   // The ID of the Customer you'd like to modify using the resulting ephemeral key.
   final String? customer;
   //he ID of the Issuing Card you'd like to access using the resulting ephemeral key.
-  // ignore: non_constant_identifier_names
-  final String? issuing_card;
+
+  final String? issuingCard;
   //A single-use token, created by Stripe.js, used for creating ephemeral keys for Issuing Cards without exchanging sensitive information.
   final String? nonce;
   //The ID of the Identity VerificationSession you'd like to access using the resulting ephemeral key
-  final String? verification_session;
+  final String? verificationSession;
   _EphemeralKeysRequest({
     this.customer,
-    this.issuing_card,
+    this.issuingCard,
     this.nonce,
-    this.verification_session,
+    this.verificationSession,
   });
 }
 
@@ -23,9 +25,9 @@ abstract class _EphemeralKeysRequest {
 class CreateEphemeralKeysRequest extends _EphemeralKeysRequest {
   CreateEphemeralKeysRequest(
       {super.customer,
-      super.issuing_card,
+      super.issuingCard,
       super.nonce,
-      super.verification_session});
+      super.verificationSession});
 
   factory CreateEphemeralKeysRequest.fromJson(Map<String, dynamic> json) =>
       _$CreateEphemeralKeysRequestFromJson(json);

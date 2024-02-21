@@ -1,10 +1,10 @@
 part of '../../messages.dart';
 
-enum _SubListObject { list }
+enum SubListObject { list }
 
 @JsonSerializable()
 class DataList<T> {
-  final _SubListObject object;
+  final SubListObject object;
 
   final List<T> data;
   final bool hasMore;

@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 library stripe;
 
 import 'package:meta/meta.dart';
@@ -42,7 +44,7 @@ class Stripe {
   /// https://stripe.com/docs/api/customers
   final CustomerResource customer;
   //idk
-  final EphemeralKeysResource ephemeral_key;
+  final EphemeralKeysResource ephemeralKey;
 
   /// https://stripe.com/docs/api/refunds
   final RefundResource refund;
@@ -75,7 +77,7 @@ class Stripe {
       : checkoutSession = CheckoutSessionResource(client),
         portalSession = PortalSessionResource(client),
         customer = CustomerResource(client),
-        ephemeral_key = EphemeralKeysResource(client),
+        ephemeralKey = EphemeralKeysResource(client),
         refund = RefundResource(client),
         paymentIntent = PaymentIntentResource(client),
         price = PriceResource(client),

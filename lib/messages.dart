@@ -21,10 +21,11 @@ part 'src/messages/requests/create_checkout_session.dart';
 part 'src/messages/requests/customer/create_customer.dart';
 part 'src/messages/requests/ephemeralkeys/create_ephemeral_key.dart';
 //part 'src/messages/requests/ephemeralkeys/delete_ephemeral_key.dart';
-part 'src/messages/requests/create_payment_intent.dart';
+part 'src/messages/requests/payment_intent/create_payment_intent.dart';
 part 'src/messages/requests/create_portal_session.dart';
 part 'src/messages/requests/create_refund.dart';
-part 'src/messages/requests/list_prices.dart';
+part 'src/messages/requests/price/list_prices.dart';
+
 part 'src/messages/requests/list_products.dart';
 part 'src/messages/requests/list_subscriptions.dart';
 part 'src/messages/requests/customer/update_customer.dart';

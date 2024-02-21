@@ -1,11 +1,12 @@
 part of '../../messages.dart';
 
-enum _EphemeralKeysObject { ephemeral_key }
+// ignore: constant_identifier_names
+enum EphemeralKeysObject { ephemeral_key }
 
 /// https://docs.stripe.com/api/customers/object
 @JsonSerializable()
 class EphemeralKeys extends Message {
-  final _EphemeralKeysObject object;
+  final EphemeralKeysObject object;
 
   /// Unique identifier for the object.
   final String id;

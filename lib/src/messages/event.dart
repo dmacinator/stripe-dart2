@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 part of '../../messages.dart';
 
 enum _EventObject { event }
@@ -33,8 +35,8 @@ abstract class Event<T extends Message> extends Message {
         return CheckoutSessionEvent.fromJson(json) as T;
       case 'customer':
         return CustomerEvent.fromJson(json) as T;
-      case 'customer':
-        return CustomerEvent.fromJson(json) as T;
+      case 'ephemeral_key':
+        return EphemeralKeysEvent.fromJson(json) as T;
       case 'payment_intent':
         return PaymentIntentEvent.fromJson(json) as T;
       // case 'portal_session'     :
@@ -71,11 +73,11 @@ class EventData<T> {
 @JsonSerializable()
 class SubscriptionEvent extends Event<Subscription> {
   SubscriptionEvent({
-    required _EventObject object,
-    required String id,
-    required String type,
-    required EventData<Subscription> data,
-  }) : super(object: object, id: id, data: data, type: type);
+    required super.object,
+    required super.id,
+    required super.type,
+    required super.data,
+  });
 
   factory SubscriptionEvent.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionEventFromJson(json);
@@ -87,11 +89,11 @@ class SubscriptionEvent extends Event<Subscription> {
 @JsonSerializable()
 class CustomerEvent extends Event<Customer> {
   CustomerEvent({
-    required _EventObject object,
-    required String id,
-    required String type,
-    required EventData<Customer> data,
-  }) : super(object: object, id: id, data: data, type: type);
+    required super.object,
+    required super.id,
+    required super.type,
+    required super.data,
+  });
 
   factory CustomerEvent.fromJson(Map<String, dynamic> json) =>
       _$CustomerEventFromJson(json);
@@ -103,11 +105,11 @@ class CustomerEvent extends Event<Customer> {
 @JsonSerializable()
 class EphemeralKeysEvent extends Event<EphemeralKeys> {
   EphemeralKeysEvent({
-    required _EventObject object,
-    required String id,
-    required String type,
-    required EventData<EphemeralKeys> data,
-  }) : super(object: object, id: id, data: data, type: type);
+    required super.object,
+    required super.id,
+    required super.type,
+    required super.data,
+  });
 
   factory EphemeralKeysEvent.fromJson(Map<String, dynamic> json) =>
       _$EphemeralKeysEventFromJson(json);
@@ -119,11 +121,11 @@ class EphemeralKeysEvent extends Event<EphemeralKeys> {
 @JsonSerializable()
 class ChargeEvent extends Event<Charge> {
   ChargeEvent({
-    required _EventObject object,
-    required String id,
-    required String type,
-    required EventData<Charge> data,
-  }) : super(object: object, id: id, data: data, type: type);
+    required super.object,
+    required super.id,
+    required super.type,
+    required super.data,
+  });
 
   factory ChargeEvent.fromJson(Map<String, dynamic> json) =>
       _$ChargeEventFromJson(json);
@@ -135,11 +137,11 @@ class ChargeEvent extends Event<Charge> {
 @JsonSerializable()
 class PaymentIntentEvent extends Event<PaymentIntent> {
   PaymentIntentEvent({
-    required _EventObject object,
-    required String id,
-    required String type,
-    required EventData<PaymentIntent> data,
-  }) : super(object: object, id: id, data: data, type: type);
+    required super.object,
+    required super.id,
+    required super.type,
+    required super.data,
+  });
 
   factory PaymentIntentEvent.fromJson(Map<String, dynamic> json) =>
       _$PaymentIntentEventFromJson(json);
@@ -151,11 +153,11 @@ class PaymentIntentEvent extends Event<PaymentIntent> {
 @JsonSerializable()
 class RefundEvent extends Event<Refund> {
   RefundEvent({
-    required _EventObject object,
-    required String id,
-    required String type,
-    required EventData<Refund> data,
-  }) : super(object: object, id: id, data: data, type: type);
+    required super.object,
+    required super.id,
+    required super.type,
+    required super.data,
+  });
 
   factory RefundEvent.fromJson(Map<String, dynamic> json) =>
       _$RefundEventFromJson(json);
@@ -167,11 +169,11 @@ class RefundEvent extends Event<Refund> {
 @JsonSerializable()
 class CheckoutSessionEvent extends Event<CheckoutSession> {
   CheckoutSessionEvent({
-    required _EventObject object,
-    required String id,
-    required String type,
-    required EventData<CheckoutSession> data,
-  }) : super(object: object, id: id, data: data, type: type);
+    required super.object,
+    required super.id,
+    required super.type,
+    required super.data,
+  });
 
   factory CheckoutSessionEvent.fromJson(Map<String, dynamic> json) =>
       _$CheckoutSessionEventFromJson(json);
