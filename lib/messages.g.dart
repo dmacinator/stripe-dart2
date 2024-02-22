@@ -949,6 +949,28 @@ Map<String, dynamic> _$CreateCustomerRequestToJson(
   return val;
 }
 
+ListCustomersRequest _$ListCustomersRequestFromJson(
+        Map<String, dynamic> json) =>
+    ListCustomersRequest(
+      email: json['email'] as String?,
+      limit: json['limit'] as int?,
+    );
+
+Map<String, dynamic> _$ListCustomersRequestToJson(
+    ListCustomersRequest instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('email', instance.email);
+  writeNotNull('limit', instance.limit);
+  return val;
+}
+
 CreateEphemeralKeysRequest _$CreateEphemeralKeysRequestFromJson(
         Map<String, dynamic> json) =>
     CreateEphemeralKeysRequest(

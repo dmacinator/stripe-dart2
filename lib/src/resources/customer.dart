@@ -17,6 +17,12 @@ class CustomerResource extends Resource<Customer> {
     return Customer.fromJson(map);
   }
 
+  Future<DataList<Customer>> list([ListCustomersRequest? request]) async {
+    final map = await get('customers', queryParameters: request?.toJson());
+    return DataList<Customer>.fromJson(
+        map, (value) => Customer.fromJson(value as Map<String, dynamic>));
+  }
+
   Future<Customer> update(UpdateCustomerRequest request) async {
     final response =
         await post('customers/${request.id}', data: request.toJson());
