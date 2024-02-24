@@ -12,6 +12,12 @@ class CustomerResource extends Resource<Customer> {
     return Customer.fromJson(response);
   }
 
+  Future<Customer> update(UpdateCustomerRequest request) async {
+    final response =
+        await post('customers/${request.id}', data: request.toJson());
+    return Customer.fromJson(response);
+  }
+
   Future<Customer> retrieve(String customerId) async {
     final map = await get('customers/$customerId');
     return Customer.fromJson(map);
@@ -21,12 +27,6 @@ class CustomerResource extends Resource<Customer> {
     final map = await get('customers', queryParameters: request?.toJson());
     return DataList<Customer>.fromJson(
         map, (value) => Customer.fromJson(value as Map<String, dynamic>));
-  }
-
-  Future<Customer> update(UpdateCustomerRequest request) async {
-    final response =
-        await post('customers/${request.id}', data: request.toJson());
-    return Customer.fromJson(response);
   }
 
   Future<Customer> delete(String customerId) async {

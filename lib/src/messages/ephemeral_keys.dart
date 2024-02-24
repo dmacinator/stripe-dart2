@@ -17,10 +17,10 @@ class EphemeralKeys extends Message {
   /// Time at which the key will expire. Measured in seconds since the Unix epoch.
   final int expires;
 
-//Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.
+  ///Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.
   final bool livemode;
 
-//The key's secret. You can use this value to make authorized requests to the Stripe API.
+  ///The key's secret. You can use this value to make authorized requests to the Stripe API.
   final String? secret;
 
   EphemeralKeys({

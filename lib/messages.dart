@@ -23,8 +23,10 @@ part 'src/messages/requests/customer/list_customers.dart';
 part 'src/messages/requests/ephemeralkeys/create_ephemeral_key.dart';
 part 'src/messages/requests/payment_intent/create_payment_intent.dart';
 part 'src/messages/requests/payment_intent/update_payment_intent.dart';
+part 'src/messages/requests/payment_intent/list_payment_intents.dart';
 part 'src/messages/requests/create_portal_session.dart';
-part 'src/messages/requests/create_refund.dart';
+part 'src/messages/requests/refunds/create_refund.dart';
+part 'src/messages/requests/refunds/list_refunds.dart';
 part 'src/messages/requests/price/list_prices.dart';
 
 part 'src/messages/requests/list_products.dart';

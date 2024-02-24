@@ -7,7 +7,10 @@ packages
 # IDE/editor files
 *.swp
 *.swo
+.vscode
 
 .DS_Store
 .dart_tool/
 .packages
+example/lib/main copy.dart
+example/analysis_options.yaml

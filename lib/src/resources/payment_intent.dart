@@ -27,6 +27,13 @@ class PaymentIntentResource extends Resource<PaymentIntent> {
     return PaymentIntent.fromJson(map);
   }
 
+  Future<DataList<PaymentIntent>> list(
+      [ListPaymentIntentsRequest? request]) async {
+    final map = await get('customers', queryParameters: request?.toJson());
+    return DataList<PaymentIntent>.fromJson(
+        map, (value) => PaymentIntent.fromJson(value as Map<String, dynamic>));
+  }
+
   /// Returns true if successful.
   Future<bool> cancel(String paymentIntentId) async {
     try {
