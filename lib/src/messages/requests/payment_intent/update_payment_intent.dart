@@ -3,9 +3,6 @@ part of '../../../../messages.dart';
 /// https://stripe.com/docs/api/payment_intents/create
 @JsonSerializable()
 class UpdatePaymentIntentRequest {
-  ///[id] of the intent to be updated
-  final String id;
-
   /// Amount intended to be collected by this PaymentIntent. A positive integer
   /// representing how much to charge in the smallest currency unit
   /// (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency).
@@ -90,7 +87,6 @@ class UpdatePaymentIntentRequest {
   final String? statementDescriptorSuffix;
 
   UpdatePaymentIntentRequest({
-    required this.id,
     this.amount,
     this.currency,
     this.automaticPaymentMethods,

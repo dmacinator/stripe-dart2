@@ -1210,7 +1210,6 @@ Map<String, dynamic> _$CreatePaymentIntentRequestToJson(
 UpdatePaymentIntentRequest _$UpdatePaymentIntentRequestFromJson(
         Map<String, dynamic> json) =>
     UpdatePaymentIntentRequest(
-      id: json['id'] as String,
       amount: json['amount'] as int?,
       currency: json['currency'] as String?,
       automaticPaymentMethods: json['automatic_payment_methods'] == null
@@ -1241,9 +1240,7 @@ UpdatePaymentIntentRequest _$UpdatePaymentIntentRequestFromJson(
 
 Map<String, dynamic> _$UpdatePaymentIntentRequestToJson(
     UpdatePaymentIntentRequest instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
