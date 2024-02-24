@@ -3,17 +3,20 @@ part of '../../../../messages.dart';
 /// https://stripe.com/docs/api/payment_intents/create
 @JsonSerializable()
 class UpdatePaymentIntentRequest {
+  ///[id] of the intent to be updated
+  final String id;
+
   /// Amount intended to be collected by this PaymentIntent. A positive integer
   /// representing how much to charge in the smallest currency unit
   /// (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency).
   /// The minimum amount is $0.50 US or equivalent in charge currency. The amount
   /// value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).
-  final int amount;
+  final int? amount;
 
   final AutomaticPaymentMethods? automaticPaymentMethods;
 
   /// Three-letter ISO currency code, in lowercase. Must be a supported currency.
-  final String currency;
+  final String? currency;
 
   /// Set to true to attempt to confirm this PaymentIntent immediately. This parameter
   /// defaults to false. When creating and confirming a PaymentIntent at the same time,
@@ -87,8 +90,9 @@ class UpdatePaymentIntentRequest {
   final String? statementDescriptorSuffix;
 
   UpdatePaymentIntentRequest({
-    required this.amount,
-    required this.currency,
+    required this.id,
+    this.amount,
+    this.currency,
     this.automaticPaymentMethods,
     this.confirm,
     this.customer,
