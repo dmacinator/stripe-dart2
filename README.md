@@ -22,3 +22,5 @@ them.
 #Additions to Stripe-Dart 2
 - Create ephemeral keys (experimental
 - Delete Ephemeral keys
+- Expand on the refunds resource
+- Update refunds object
