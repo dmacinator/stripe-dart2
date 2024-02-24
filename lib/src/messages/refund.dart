@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 part of '../../messages.dart';
 
 enum RefundObject { refund }
@@ -5,8 +7,8 @@ enum RefundObject { refund }
 enum RefundReason {
   duplicate,
   fraudulent,
-  requestedByCustomer,
-  expiredUncapturedChargem
+  requested_by_customer,
+  expired_uncaptured_chargem
 }
 
 /// https://docs.stripe.com/api/refunds/object

@@ -1,14 +1,16 @@
+// ignore_for_file: constant_identifier_names
+
 part of '../../messages.dart';
 
 // ignore: constant_identifier_names
 enum PaymentIntentObject { payment_intent }
 
 enum IntentStatus {
-  requiresPaymentMethod,
-  requiresConfirmation,
-  requiresAction,
+  requires_payment_method,
+  requires_confirmation,
+  requires_action,
   processing,
-  requiresCapture,
+  requires_capture,
   canceled,
   succeeded
 }
@@ -17,13 +19,13 @@ enum CancellationReason {
   abandoned,
   automatic,
   duplicate,
-  failedInvoice,
+  failed_invoice,
   fraudulent,
-  requestedByCustomer,
-  voidInvoice
+  requested_by_customer,
+  void_invoice
 }
 
-enum CaptureMethod { automatic, automaticAsync, manual }
+enum CaptureMethod { automatic, automatic_async, manual }
 
 enum ConfirmationMethod { automatic, manual }
 

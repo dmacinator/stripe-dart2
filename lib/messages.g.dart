@@ -582,15 +582,15 @@ const _$CancellationReasonEnumMap = {
   CancellationReason.abandoned: 'abandoned',
   CancellationReason.automatic: 'automatic',
   CancellationReason.duplicate: 'duplicate',
-  CancellationReason.failedInvoice: 'failedInvoice',
+  CancellationReason.failed_invoice: 'failed_invoice',
   CancellationReason.fraudulent: 'fraudulent',
-  CancellationReason.requestedByCustomer: 'requestedByCustomer',
-  CancellationReason.voidInvoice: 'voidInvoice',
+  CancellationReason.requested_by_customer: 'requested_by_customer',
+  CancellationReason.void_invoice: 'void_invoice',
 };
 
 const _$CaptureMethodEnumMap = {
   CaptureMethod.automatic: 'automatic',
-  CaptureMethod.automaticAsync: 'automaticAsync',
+  CaptureMethod.automatic_async: 'automatic_async',
   CaptureMethod.manual: 'manual',
 };
 
@@ -605,11 +605,11 @@ const _$SetupFutureUsageEnumMap = {
 };
 
 const _$IntentStatusEnumMap = {
-  IntentStatus.requiresPaymentMethod: 'requiresPaymentMethod',
-  IntentStatus.requiresConfirmation: 'requiresConfirmation',
-  IntentStatus.requiresAction: 'requiresAction',
+  IntentStatus.requires_payment_method: 'requires_payment_method',
+  IntentStatus.requires_confirmation: 'requires_confirmation',
+  IntentStatus.requires_action: 'requires_action',
   IntentStatus.processing: 'processing',
-  IntentStatus.requiresCapture: 'requiresCapture',
+  IntentStatus.requires_capture: 'requires_capture',
   IntentStatus.canceled: 'canceled',
   IntentStatus.succeeded: 'succeeded',
 };
@@ -809,8 +809,8 @@ const _$RefundObjectEnumMap = {
 const _$RefundReasonEnumMap = {
   RefundReason.duplicate: 'duplicate',
   RefundReason.fraudulent: 'fraudulent',
-  RefundReason.requestedByCustomer: 'requestedByCustomer',
-  RefundReason.expiredUncapturedChargem: 'expiredUncapturedChargem',
+  RefundReason.requested_by_customer: 'requested_by_customer',
+  RefundReason.expired_uncaptured_chargem: 'expired_uncaptured_chargem',
 };
 
 ShippingSpecification _$ShippingSpecificationFromJson(
